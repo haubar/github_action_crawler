@@ -12,9 +12,10 @@ jobs:
     environment: staging
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  
       - name: Run something
-      - run: curl ident.me .
+        run:  | 
+          curl ident.me 
       - name: Run workflows action..
         uses: ./.github/action/actions
         env:
