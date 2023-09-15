@@ -17,9 +17,11 @@ jobs:
         run:  | 
           curl ident.me 
       - name: Run workflows action..
-      - uses: actions/checkout@v3
-      - uses: ./.github/action/actions
+        uses: ./.github/action/actions
         env:
           SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+
+      - name: Echo something
+        run: echo "沒事就來改改測測"
 
