@@ -17,7 +17,7 @@ jobs:
         run:  | 
           curl ident.me 
       - name: Run workflows action..
-        uses: ./.github/action/actions
+        uses: haubar/ig_crawer@master
         env:
           SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
